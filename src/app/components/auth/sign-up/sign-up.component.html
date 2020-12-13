@@ -1,0 +1,25 @@
+<div class="signup-wrapper">
+    <div class="title">
+        SIGN UP & GET STARTED
+    </div>
+    <br>
+    <div class="signup-form">
+        <form [formGroup]="signUpForm">
+            <p class="subtitle">Email</p>
+            <input type="email" placeholder="Enter email" formControlName="email_id">
+
+            <p class="subtitle">Name</p>
+            <input type="text" placeholder="Enter name" formControlName="name">
+
+            <p class="subtitle">Password</p>
+            <input type="password" placeholder="Enter password" formControlName="password">
+        </form>
+        <br>
+        <button class="btn" (click)="signUp()" [disabled]="signUpForm.invalid">SIGN UP</button>
+    </div>
+    <br><br>
+    <div class="signup">
+        <span>Already have an account?</span>&nbsp;&nbsp;
+        <a [routerLink]="['/login']">SIGN IN</a>
+    </div>
+</div>

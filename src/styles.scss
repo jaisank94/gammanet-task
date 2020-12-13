@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body { margin: 0; }
+
+*:focus {
+    outline: 0 !important;
+}
+
+mat-form-field {
+    width: -webkit-fill-available;
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.signup-wrapper{
+    padding: 40px 70px;
+
+    .title{
+        width: 169px;
+        height: 60px;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.67;
+        letter-spacing: 5px;
+        text-align: center;
+        color: #343534;
+        margin: auto;
+    }
+
+    .signup-form{
+        .subtitle{
+            font-family: Roboto;
+            font-weight: 300;
+            color: #8c949c;
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+
+        input{
+            width: 250px;
+            height: 35px;
+            border: none;
+            border-bottom: solid 2px #345a99;
+            margin-bottom: 10px;
+        }
+
+        button{
+            height: 31px;
+            width: 92px;
+            border: solid 1px #23c994;
+            background-color: #ffffff;
+            color: #23c994;
+            cursor: pointer;
+        }
+    }
+}
+
+.signup{
+    display: flex;
+    font-size: 12px;
+
+    span{
+        color: #8c949c;
+    }
+
+    a{
+        color: #23c994;
+    }
+}
