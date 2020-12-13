@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Add EXPERIENCE</h1>
+<form [formGroup]="addExpForm">
+    <div mat-dialog-content>
+        <div class="d-flex">
+            <div>
+                <p class="subtitle">Company</p>
+                <input type="text" class="input" formControlName="company_name">
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div>
+                <p class="subtitle">Title</p>
+                <input type="text" class="input" formControlName="title">
+            </div>
+        </div>
+        <div class="d-flex">
+            <div>
+                <p class="subtitle">Location</p>
+                <input type="text" class="input" formControlName="location">
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div>
+                <p class="subtitle">Start Date</p>
+                <input type="text" class="input" formControlName="start_date">
+            </div>
+        </div>
+
+        <p class="subtitle">Description</p>
+        <textarea class="area" formControlName="description"></textarea>
+
+
+    </div>
+</form>
+<div class="right" mat-dialog-actions>
+    <button class="cancel-btn" (click)="onNoClick()">Cancel</button>&nbsp;&nbsp;&nbsp;
+    <button class="button" (click)="onSubmit()">Submit</button>
+</div>

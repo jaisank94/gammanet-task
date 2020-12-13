@@ -18,7 +18,7 @@ export class AuthService {
       catchError((err) => {
         return throwError(err);
       })
-    )
+    );
   }
 
   signInUser(data): any {
@@ -27,6 +27,6 @@ export class AuthService {
       catchError((err) => {
         return throwError(err);
       })
-    )
+    );
   }
 }

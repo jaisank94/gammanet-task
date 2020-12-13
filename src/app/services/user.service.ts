@@ -18,12 +18,21 @@ export class UserService {
       catchError((err) => {
         return throwError(err);
       })
-    )
+    );
   }
 
   getUserHistory(email): any {
     return this.http.get(`${environment.url}/user_job_history?email_id=${email}`).pipe(
       map(res => res['past_jobs']),
+      catchError((err) => {
+        return throwError(err);
+      })
+    );
+  }
+
+  addUserExperience(data) {
+    return this.http.post(`${environment.url}/user_job_history`, data).pipe(
+      map(res => true),
       catchError((err) => {
         return throwError(err);
       })

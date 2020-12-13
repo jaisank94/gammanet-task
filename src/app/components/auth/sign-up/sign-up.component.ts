@@ -18,7 +18,7 @@ export class SignUpComponent implements OnInit {
       email_id: ['', [Validators.required, Validators.email]],
       name: ['', Validators.required],
       password: ['', Validators.required]
-    })
+    });
   }
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export class SignUpComponent implements OnInit {
     this.authService.signUpUser(this.signUpForm.value).subscribe(res => {
       if (res)
         this.router.navigate(['user']);
-    })
+    });
   }
 
 }

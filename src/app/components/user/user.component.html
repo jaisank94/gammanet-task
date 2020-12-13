@@ -2,4 +2,36 @@
     <div class="logo-bar">
         <img src="assets/images/group-logo.svg" alt="logo">
     </div>
+    <div class="exp-wrapper">
+        <div class="exp-container">
+            <div class="title-name">
+                <h1 class="title">WORK EXPERIENCE</h1>
+                <h1 class="name">{{userName | titlecase}}</h1>
+            </div>
+            <br>
+
+            <div class="list-wrapper">
+                <div class="list-header">
+                    <p class="header w-150">Company</p>
+                    <p class="header w-150">Title</p>
+                    <p class="header w-150">Location</p>
+                    <p class="header w-200">Month/Year - Month/Year</p>
+                    <p class="header w-250">Description</p>
+                </div>
+            </div>
+            <ng-container *ngFor="let expData of jobHistory">
+                <div class="list-data">
+                    <p class="w-150 data">{{expData?.company_name |titlecase }}</p>
+                    <p class="w-150 data">{{expData?.title |titlecase }}</p>
+                    <p class="w-150 data">{{expData?.start_date}}</p>
+                    <p class="w-200 data">{{expData?.location |titlecase }}</p>
+                    <p class="w-250 data">{{expData?.description |titlecase }}</p>
+                </div>
+            </ng-container>
+            <br>
+
+            <button class="button" (click)="addExperience()">+ ADD</button>
+        </div>
+    </div>
+
 </div>

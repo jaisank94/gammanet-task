@@ -1,0 +1,35 @@
+.cancel-btn{
+    height: 30px;
+    width: 92px;
+    border: solid 1px grey;
+    background-color: #ffffff;
+    color: grey;
+    cursor: pointer;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.subtitle{
+    font-family: Roboto;
+    font-weight: 300;
+    color: #8c949c;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.input{
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-bottom: solid 2px #345a99;
+    margin-bottom: 10px;
+}
+
+.area{
+    margin-top: 10px;
+    width: 520px;
+    height: 75px;
+    border: solid 2px #345a99;
+}
