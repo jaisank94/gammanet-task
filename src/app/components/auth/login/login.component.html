@@ -1,18 +1,20 @@
 <div class="signup-wrapper">
-    <div class="title">
-        HAVE AN ACCOUNT? JUST SIGN IN!
-    </div>
-    <br>
-    <div class="signup-form">
-        <form [formGroup]="loginForm">
-            <p class="subtitle">Email</p>
-            <input type="email" placeholder="Enter email" formControlName="email_id">
-
-            <p class="subtitle">Password</p>
-            <input type="password" placeholder="Enter password" formControlName="password">
-        </form>
+    <div>
+        <div class="title">
+            HAVE AN ACCOUNT? JUST SIGN IN!
+        </div>
         <br>
-        <button class="btn button" (click)="signIn()" [disabled]="loginForm.invalid">SIGN IN</button>
+        <div class="signup-form">
+            <form [formGroup]="loginForm">
+                <p class="subtitle">Email</p>
+                <input type="email" placeholder="Enter email" formControlName="email_id">
+
+                <p class="subtitle">Password</p>
+                <input type="password" placeholder="Enter password" formControlName="password">
+            </form>
+            <br>
+            <button class="btn button" (click)="signIn()" [disabled]="loginForm.invalid">SIGN IN</button>
+        </div>
     </div>
     <br><br>
     <div class="signup">
