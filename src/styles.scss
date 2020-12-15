@@ -87,8 +87,13 @@ mat-form-field {
             width: 250px;
             height: 35px;
             border: none;
-            border-bottom: solid 2px #345a99;
+            border-bottom: solid 2px #e6ecef;
             margin-bottom: 10px;
+        }
+
+        input:focus {
+            border-bottom: solid 2px #345a99;
+            color: #286aa6
         }
     }
 }
@@ -103,6 +108,7 @@ mat-form-field {
 
     a{
         color: #23c994;
+        text-decoration: none;
     }
 }
 
