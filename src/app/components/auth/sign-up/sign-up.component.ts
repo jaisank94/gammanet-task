@@ -26,8 +26,10 @@ export class SignUpComponent implements OnInit {
 
   signUp(): void {
     this.authService.signUpUser(this.signUpForm.value).subscribe(res => {
-      if (res)
+      if (res) {
+        localStorage.setItem('email', this.signUpForm.value['email_id']);
         this.router.navigate(['user']);
+      }
     });
   }
 

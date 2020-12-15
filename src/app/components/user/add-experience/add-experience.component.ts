@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { UserService } from 'src/app/services/user.service';
 
@@ -17,11 +17,11 @@ export class AddExperienceComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<UserComponent>, @Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder, private userService: UserService) {
     this.addExpForm = this.fb.group({
-      company_name: '',
-      title: '',
-      start_date: '',
-      location: '',
-      description: '',
+      company_name: ['', Validators.required, Validators.pattern('"\\S"')],
+      title: ['', Validators.required],
+      start_date: ['', Validators.required],
+      location: ['', Validators.required],
+      description: ['', Validators.required],
       email_id: this.data.email_id
     })
   }

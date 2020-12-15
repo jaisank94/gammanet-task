@@ -30,5 +30,5 @@
 </form>
 <div class="right" mat-dialog-actions>
     <button class="cancel-btn" (click)="onNoClick()">Cancel</button>&nbsp;&nbsp;&nbsp;
-    <button class="button" (click)="onSubmit()">Submit</button>
+    <button class="button" [disabled]="addExpForm.invalid" (click)="onSubmit()">Submit</button>
 </div>
